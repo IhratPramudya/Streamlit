@@ -1,0 +1,56 @@
+import streamlit as st
+import base64
+from st_clickable_images import clickable_images
+
+col1, col2 = st.columns(2)
+
+
+images = []
+for file in ["files/profil.png", "files\pembalap.jpg"]:
+    with open(file, "rb") as image:
+        encoded = base64.b64encode(image.read()).decode()
+        images.append(f"data:image/jpeg;base64,{encoded}")
+
+clicked = clickable_images(
+    images,
+    titles=[f"Image #{str(i)}" for i in range(len(images))],
+    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+    img_style={"margin": "5px", "height": "100px"},
+)
+
+col1.write(f"{'aku ganteng ya cieee ada yang pencet !!!' if clicked == 0 else 'loh'}" if clicked > -1 else "Klik Gambar Jika Penasaran !!!")
+col2.audio("postmalone.mp3", format="audio/mpeg", loop=True, autoplay=True)
+# st.title("Tim Visquad Data Mining")
+
+st.header("""My Biografi""")
+
+#Displaying Plain Text
+st.text("Hay,\nsemua\t!!!!!!!!! Nama Saya Ihrat pramudya")
+st.text('Selamat Datangg')
+st.text("""Di pembahasan kali ini saya telah membangun model Machine Learning yang""")
+st.text("""menjadi tugas akhir saya untuk menempuh jalur akhir dalam bidang Ilmu Komputer""")
+st.text("""Senang rasanya ada orang yang ingin membaca tulisan saya walapun masih sedikit""")
+st.text("""kekurangan tetapi saya merasa bersyukur dengan karunia tuhan Allah saya masih bisa """)
+st.text("""diberikan kemampuan untuk menulis dan belajar.""")
+
+
+st.header("""Team Visquad""")
+st.text("""Selain itu saya juga di bantu oleh beberapa teman saya yang mahir dalam bidangnya""")
+st.text("""untuk membangun skripsi ini dan saya banyak belajar dari prespektif yang berbeda""")
+st.text("""Pengalaman saya dibentuk ketika saya mengikuti pembelajaran di luar kampus""")
+st.text("""khususnya Kampus Merdeka yang di rancang oleh mentri kita yaitu bapak Nadiem makarim""")
+st.header("""Tentang Machine Learning""")
+st.subheader("""Jenis Machine Learning""")
+st.caption("""Pembahasan dalam model yang telah di buat ada beberapa metode yang digunakan""")
+with st.expander("Supervised Learning"):
+    st.write("Supervised Learning adalah salah satu pemebelajaran yang diawasi dari data yang memeiliki label tertentu yang dimana model memepelajari label yang ada")
+with st.expander("Unsupervised Learning"):
+    st.write("Develop ML Applications in Minutes!!!!")
+st.sidebar.radio("Apakah Kamu User Baru", ["Yes", "No"])
+
+st.header("""Model Machine Learning""")
+st.subheader("""Supervised Learning""")
+with st.expander("Naive Bayes"):
+    st.write("Supervised Learning adalah salah satu pemebelajaran yang diawasi dari data yang memeiliki label tertentu yang dimana model memepelajari label yang ada")
+with st.expander("Unsupervised Learning"):
+    st.write("Develop ML Applications in Minutes!!!!")
