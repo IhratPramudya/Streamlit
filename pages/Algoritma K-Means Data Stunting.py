@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 st.title("Upload Dataset")
-data_file = st.file_uploader((""), type=["xlsx"])
+data_file = st.file_uploader(("Silahkan Upload"), type=["xlsx"])
 
 
 if data_file is not None:
@@ -15,7 +15,7 @@ if data_file is not None:
     }
 
     st.write(file_detail)
-    df = pd.read_excel(data_file)
+    df = pd.read_excel(data_file, engine='openpyxl')
 
 
     
@@ -90,9 +90,9 @@ if data_file is not None:
     
     st.title("Pengurangan Variabel")
 
-    numeric_cols_no_outlier_data_stunting = no_outlier_data_stunting.select_dtypes(include=['number'])
-    column_No_Outliers_x = st.sidebar.selectbox('hapus parameter',
-    (numeric_cols_no_outlier_data_stunting.columns))
+    # numeric_cols_no_outlier_data_stunting = no_outlier_data_stunting.select_dtypes(include=['number'])
+    # column_No_Outliers_x = st.sidebar.selectbox('hapus parameter',
+    # (numeric_cols_no_outlier_data_stunting.columns))
 
     
 else:

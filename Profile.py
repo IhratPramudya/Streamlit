@@ -6,7 +6,7 @@ col2.audio("postmalone.mp3", format="audio/mpeg", loop=True, autoplay=True)
 # st.title("Tim Visquad Data Mining")
 
 st.header("""My Biografi""")
-
+st.sidebar.subheader("""Foto Saya""")
 #Displaying Plain Text
 st.text("Hay,\nsemua\t!!!!!!!!! Nama Saya Ihrat pramudya")
 st.text('Selamat Datangg')
