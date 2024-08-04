@@ -1,8 +1,6 @@
 import streamlit as st
 
-col1, col2 = st.columns(2)
-
-col2.audio("postmalone.mp3", format="audio/mpeg", loop=True, autoplay=True)
+st.audio("postmalone.mp3", format="audio/mpeg", autoplay=True)
 # st.title("Tim Visquad Data Mining")
 
 st.header("""My Biografi""")
