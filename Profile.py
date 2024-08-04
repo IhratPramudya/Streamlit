@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-from st_clickable_images import clickable_images
 
 col1, col2 = st.columns(2)
 
@@ -11,14 +10,6 @@ for file in ["files/profil.png", "files\pembalap.jpg"]:
         encoded = base64.b64encode(image.read()).decode()
         images.append(f"data:image/jpeg;base64,{encoded}")
 
-clicked = clickable_images(
-    images,
-    titles=[f"Image #{str(i)}" for i in range(len(images))],
-    div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
-    img_style={"margin": "5px", "height": "100px"},
-)
-
-col1.write(f"{'aku ganteng ya cieee ada yang pencet !!!' if clicked == 0 else 'loh'}" if clicked > -1 else "Klik Gambar Jika Penasaran !!!")
 col2.audio("postmalone.mp3", format="audio/mpeg", loop=True, autoplay=True)
 # st.title("Tim Visquad Data Mining")
 
