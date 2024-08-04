@@ -1,8 +1,5 @@
 import streamlit as st
 
-st.audio("postmalone.mp3", format="audio/mpeg", autoplay=True)
-# st.title("Tim Visquad Data Mining")
-
 st.header("""My Biografi""")
 st.sidebar.subheader("""Foto Saya""")
 #Displaying Plain Text
