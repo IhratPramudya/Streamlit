@@ -1,26 +1,26 @@
 import streamlit as st
 import os
 import nltk
-from nltk.data import find
+import re
 from textblob import TextBlob
 from nltk.stem import WordNetLemmatizer
-import re
+from nltk.data import find
 
-# Define the target directory for NLTK data
-target_dir = '/usr/local/share/nltk_data'
-
-# Check if the target directory exists and contains NLTK data
-try:
-    find('corpora/stopwords.zip', paths=[target_dir])
-    print(f"NLTK data already exists in {target_dir}")
-except LookupError:
-    # Create the target directory if it doesn't exist
+def download_nltk_data():
+    target_dir = os.path.join(os.getcwd(), 'nltk_data')
+    
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
+    
+    try:
+        find('corpora/stopwords.zip', paths=[target_dir])
+        print("NLTK data already exists.")
+    except LookupError:
+        print("Downloading only required NLTK data...")
+        nltk.download('stopwords', download_dir=target_dir)
+        print(f"NLTK stopwords data has been downloaded to {target_dir}")
 
-    # Download NLTK data to the target directory
-    nltk.download('all', download_dir=target_dir)
-    print(f"NLTK data has been downloaded and installed to {target_dir}")
+download_nltk_data()
 
 st.title("Hallo Semua Selamat Datang di app NLP yang Ihrat Buat")
 
