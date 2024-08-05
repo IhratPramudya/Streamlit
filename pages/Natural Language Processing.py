@@ -1,8 +1,11 @@
 import streamlit as st
+import nltk
 # NLP Pkgs
 from textblob import TextBlob
 from nltk.stem import WordNetLemmatizer
 import re
+
+nltk.download()
 
 st.title("Hallo Semua Selamat Datang di app NLP yang Ihrat Buat")
 
