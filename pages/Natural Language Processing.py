@@ -9,12 +9,12 @@ nltk.download('omw-1.4')
 
 st.title("Hallo Semua Selamat Datang di app NLP yang Ihrat Buat")
 
-st.subheader("Welcome to our Application")
+st.subheader("Welcome to our Application WEWELOVEuuuuu")
 
 text = st.text_area("Enter Your Text Contoh 'hari ini cuaca cerah / Good Weather'")
 
 #Keeping only Text and digits
-text = re.sub(r"[^A-Za-z0-9]", " ", text)
+text = re.sub(r"[^A-Za-z0-9]", " ", text) 
 #Removes Whitespaces
 text = re.sub(r"\'s", " ", text)
 # Removing Links if any
@@ -53,11 +53,11 @@ from nltk.stem import WordNetLemmatizer
 import re
 
 def main():
-    st.title("NLP")
+    st.title("NLP Untuk para pencari Cinta Sejati")
 
-    st.subheader("Welcome to our Application")
+    st.subheader("Selamat Datang di aplikasi WEWELOVEuuuuu")
 
-    text = st.text_area("Your Text Contoh Aku Patah Hati")
+    text = st.text_area("Your Text Contoh 'I Love You' Aku Cinta Kamu")
 
     #Text Cleaning
     #Keeping only Text and digits
