@@ -5,6 +5,7 @@ from textblob import TextBlob
 from nltk.stem import WordNetLemmatizer
 
 nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 st.title("Hallo Semua Selamat Datang di app NLP yang Ihrat Buat")
 
