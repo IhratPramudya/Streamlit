@@ -1,5 +1,6 @@
 import streamlit as st
 import nltk
+import re
 from textblob import TextBlob
 from nltk.stem import WordNetLemmatizer
 
