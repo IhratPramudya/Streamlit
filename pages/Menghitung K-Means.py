@@ -47,7 +47,7 @@ st.write("1. Langkah pertama yaitu dengan cara menentukan nilai K untuk menemuka
 
 st.write("2. Mengukur atau menghitung jarak setiap data dengan centroid yang sudah di tetapkan dengan menghitung\
     menggunakan rumus Euclidean Distance. Berikut contoh rumus yang di berikan")
-st.latex("𝐷𝑒 = √(𝑥𝑖 − 𝑠𝑗)2 + (𝑦𝑖 − 𝑡𝑗)2")
+st.latex("𝐷𝑒 = √{(𝑥𝑖 − 𝑠𝑗)^2 + (𝑦𝑖 − 𝑡𝑗)^2}")
 
 st.write("Penjelasan dari rumus tersebut")
 st.write("𝐷𝑒     = Euclidean Distance")
@@ -96,3 +96,19 @@ st.dataframe(df)
 st.write("Dalam dataset tersebut kita tahu bahwa setiap kolom memiliki tipe data numerik atau angka yang dapat di hitung.\
          Data numerik sendiri berjalan pada semua alagoritma dan pada umumnya karena model hanya bisa mengetahui angka\
          Nah sudah tidak sabar lagikan jika kita ingin menghitung bagaimana penggunaan algoritma k-means ini dalam contoh nyata, *!!!!!* :sunglasses: ?")
+st.write("Menentukan nilai K")
+st.write("Kita sudah membaca di halaman atas hal yang pertama di lakukan adalah kita menentukan kira kira kluster berapa yang akan kita gunakan\
+         dalam hal ini contohnya jika kita ingin mencari kluster terbaik kita bisa menggunakan beberapa metode yang banyak digunakan\
+         dalam Ilmuan Komputer yaitu Metode Elbow, Silhouette score dan masih banyak lagi metode lainya.")
+st.write("Namun dalam penulisan ini menggunakan 2 kluster hanya sebagai contoh perhitungan.")
+st.write("Dalam penulisan kali ini kita memilih centroid secara acak dari data yang ada.")
+st.write("Centroid kluster 1 𝑥𝑖 Berat (gram) = 120 𝑦𝑖 = Ukuran (cm) = 8")
+st.write("Centroid kluster 2 𝑥𝑖 Berat (gram) = 110 𝑦𝑖 = Ukuran (cm) = 7.9")
+st.write("Iterasi 1 kluster 1")
+st.latex("D_e 1 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2} = 30.0025")
+st.latex("D_e 2 = \sqrt{(130 - 120)^2 + (6.8 - 8)^2} = 10.0717")
+st.latex("D_e 3 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2} = ")
+st.latex("D_e 4 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2}")
+st.latex("D_e 5 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2}")
+st.latex("D_e 6 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2}")
+st.latex("D_e 7 = \sqrt{(150 - 120)^2 + (7.5 - 8)^2}")
