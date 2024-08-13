@@ -67,3 +67,32 @@ st.write("Contoh pada kluster 1 𝑥𝑖,𝑦𝑖 yang di rata-ratakan mendapatk
 st.latex(r'''
     t_{ij} = \frac{1}{N_i} \sum_{k=0}^{N_i} X_{kj}
 ''')
+
+st.write("Penjelasan dari rumus tersebut")
+st.write("𝑣𝑖𝑗 = Centroid rata-rata kluster ke-i untuk variabel ke-j")
+st.write("𝑁𝑖 = Jumlah anggota kluster ke-i misalnya kita hitung jumlah data yang ada di kluster tertentu")
+st.write("i,k  = Indeks data dari kluster misalkan untuk data  𝑥𝑖 = Berat (gram), 𝑦𝑖 = Ukuran (cm)\
+         untuk i = [i, i1, i2, i3, n] yang berada di kluster k = [k, k1, k2, n] hingga seterunya")
+st.write("j = Indeks dari variabel misalkan untuk variabel  𝑥𝑖 = Berat (gram), 𝑦𝑖 = Ukuran (cm)\
+         kita bisa asumsikan jika kita mengetahui jika variabelnya memiliki 2 j = [j1, j2]")
+st.write("𝑋𝑘𝑗 = nilai data ke-k atau nilai kluster dalam contoh ini misalkan kluster 1 variabel ke-j \
+         untuk kluster 1 yaitu misalkan j = 1 berarti variabelnya adalah Berat (gram)")
+st.write("5. Lakukan perulangan dari langkah 2 sampai ke 4 sampai kita mendapatkan kluster \
+         yang tidak berpindah lagi atau sudah konvergen")
+
+st.subheader("""Menghitung menggunakan K-Means Contoh nyata""")
+
+st.write("Kita masih menggunakan dataset yang sebelumnya yang sudah kita tampilkan di awal dari tulisan ini\
+         data ini terdiri dari 10 baris atau rows dan 2 kolom atau yang bisa di sebut columns, *Sudah mengerti atau belum!!!!!* :sunglasses: ?")
+st.write("Jika kita ingin mengerti dari data yang ada kita tahu bahwa masing baris dan kolom kita bisa simpulkan\
+         data ini memiliki variabel 𝑥𝑖 = Berat (gram) 𝑦𝑖 = Ukuran (cm) contoh dapat di lihat di bawah.")
+
+df = pd.read_excel("files/example-fruits-dataset.xlsx", engine="openpyxl")
+# defining data in table
+df["Ukuran (cm)"].astype(float)
+
+st.dataframe(df)
+
+st.write("Dalam dataset tersebut kita tahu bahwa setiap kolom memiliki tipe data numerik atau angka yang dapat di hitung.\
+         Data numerik sendiri berjalan pada semua alagoritma dan pada umumnya karena model hanya bisa mengetahui angka\
+         Nah sudah tidak sabar lagikan jika kita ingin menghitung bagaimana penggunaan algoritma k-means ini dalam contoh nyata, *!!!!!* :sunglasses: ?")
