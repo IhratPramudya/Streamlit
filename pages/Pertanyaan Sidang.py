@@ -3,16 +3,18 @@ import base64
 
 st. set_page_config(layout="wide") 
 
-def displayPDF(file):
+def displayPDF(url):
     # Opening file from file path
-    with open(file, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    # with open(file, "rb") as f:
+    #     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-    # Embedding PDF in HTML
-    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"/>'
+    # # Embedding PDF in HTML
+    # pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"/>'
 
-    # Displaying File
+    pdf_display = f'<iframe src="{url}" width="100%" height="1000px" style="border: none;"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
+    # Displaying File
+    # st.markdown(pdf_display, unsafe_allow_html=True)
 
 
 
@@ -130,6 +132,6 @@ st.write("Karena metode ini relatif sederhana dan mudah ditetapkan, dapat\
          mengelompokkan data besar dengan sangat cepat.(Ada di dalam jurnal 1120)")
 st.button("Tutup Jurnal")
 if st.button("Buka Jurnal 1120 (jurnal 1).pdf", type="secondary"):
-    displayPDF("files/pdf/1120 (jurnal 1).pdf")
+    displayPDF("https://coral-kassey-1.tiiny.site")
 else:
     st.write("Silahkan Buka Jurnal")
