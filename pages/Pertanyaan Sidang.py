@@ -1,5 +1,6 @@
 import streamlit as st
-import base64
+import time
+# import base64
 
 st. set_page_config(layout="wide") 
 
@@ -11,7 +12,7 @@ def displayPDF(url):
     # # Embedding PDF in HTML
     # pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"/>'
 
-    pdf_display = f'<iframe src="{url}" width="100%" height="1000px" style="border: none;"></iframe>'
+    pdf_display = f'<iframe src="{url}" width="1000" height="1000px" style="margin-left: -70px;"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
     # Displaying File
     # st.markdown(pdf_display, unsafe_allow_html=True)
@@ -130,8 +131,12 @@ st.write("Karena metode ini relatif sederhana dan mudah ditetapkan, dapat\
          digunakan untuk dataset dalam jumlah besar dan telah digunakan secara\
          luas untuk menyelesaikan berbagai persoalan komputasi, mampu\
          mengelompokkan data besar dengan sangat cepat.(Ada di dalam jurnal 1120)")
-st.button("Tutup Jurnal")
-if st.button("Buka Jurnal 1120 (jurnal 1).pdf", type="secondary"):
+st.button("Tutup Jurnal", type=("primary"))
+if st.button("Buka Jurnal 1120 (jurnal 1).pdf", type=("secondary")):
+    with st.spinner("Loading Dulu Gais..."):
+        time.sleep(3)
     displayPDF("https://coral-kassey-1.tiiny.site")
 else:
     st.write("Silahkan Buka Jurnal")
+
+
