@@ -2,7 +2,7 @@ import streamlit as st
 import time
 # import base64
 
-st. set_page_config(layout="wide") 
+# st. set_page_config(layout="wide") 
 
 def displayPDF(url):
     # Opening file from file path
@@ -138,3 +138,119 @@ if st.button("Buka Jurnal 1379.pdf", type=("secondary")):
     displayPDF("https://coral-kassey-1.tiiny.site")
 else:
     st.write("Silahkan Buka Jurnal")
+st.write("A2. Dikatakan dari mana kalau penggunaan metode ini relatif mudah ?")
+st.write("Jawab :")
+st.write("- Karena dibandingkan dengan metode klusterisasi lainnya,\
+         algoritma k-means ccukup menentukan nilai K dan nilai centroid.")
+st.write("- Kami melakukan riset mengenai metode lain yaitu DBSCAN.\
+         DBSCCAN butuh menentukan feature (variable), nilai epsilon,\
+         min_samples")
+
+st.write("B1. Centroid itu apa ?")
+st.write("Jawab: ")
+st.write("- Centroid merupakan nilai pusat (center) dari sebuah kluster")
+st.write("B2. Apa itu Euclidean distance ?")
+st.write("Jawab :")
+st.write("- Euclidean distance digunakan untuk menghitung jarak ukur antara dua\
+         titik dengan menghitung akar kuadrat dari jumlah selisih kuadrat antara\
+         keduanya.")
+st.header("BAB I")
+st.subheader("12. State of The Art")
+st.write("A. Dari penelitian terdahulu apa yang membedakan parameter yang\
+         digunakan dengan penelitian kamu ?")
+st.write("Jawab :")
+st.write("Parameter yang penelitian ini gunakan hanya Jumlah balita dan stunting sementara")
+st.write("1. Cytry, 2023 =")
+st.write("- (A), Jumlah keluarga yang memiliki bayi dibawah dua tahun")
+st.write("- (B), Jumlah keluarga yang memiliki bayi dibawah lima tahun")
+st.write("- (C), Jumlah keluarga yang memiliki ibu hamil")
+st.write("- (D), Jumlah keluarga dengan sanitasi tidak layak")
+st.write("- (E), Jumlah keluarga dengan sumber air tidak layak.")
+st.write("2. Handayani, 2023 =")
+st.write("- Rating pengeluaran tahunan (yearly expense rating)")
+st.write("- Pendapatan tahunan (yearly salary)")
+st.write("3. Indra, 2023 =")
+st.write("- X1, Persentase anak usia 12-23 bulan yang mendapatkan\
+imunisasi dasar lengkap.")
+st.write("- X2, Proporsi stunting (TB/U) pada balita.")
+st.write("- X5, Cakupan bayi baru lahir yang mendapat inisiasi menyusui\
+dini.")
+st.write("- X6, Cakupan pemberian kapsul vitamin A.")
+st.write("- X7, Cakupan pemberian tablet tambah darah.")
+st.write("- X8, Persentase rumah tangga dengan akses terhadap sanitasi\
+yang layak.")
+st.write("- X9, Persentase rumah tangga dengan akses terhadap air\
+minum yang layak.")
+st.write("Variabel yang tidak digunakan :")
+st.write("- X3, Persentase rerata balita umur 6-59 bulan ditimbang\
+perbulan.")
+st.write("- X4, Cakupan imunisasi dasar lengkap.")
+st.write("B. Apa kelebihan penelitian kamu dibandingkan penelitian terdahulu ?")
+
+st.write("B. Apa kelebihan penelitian kamu dibandingkan penelitian terdahulu\
+?")
+st.write("Jawab: ")
+st.write("• Cyntry (Jurnal 1)")
+st.write("Penelitian cyntry memiliki memiliki kekurangan karena tidak\
+menggunakan metode untuk validasi nilai k (karena tidak\
+tercantum pada jurnal). Sedangkan penelitian kami\
+menggunakan metode silhouette score dan elbow method untuk\
+mencari dan validasi nilai k.")
+st.write("• Handayani (Jurnal 2) / (Referensi/dasar penelitian)\
+Hasil yang didapatkan penelitian ini menunjukan bahwa k-\
+means memiliki performa klasterisasi yang kuat. (bukan\
+perbandingan tapi dasar penelitian)")
+st.write("• Indra (Jurnal 3) / (Referensi/dasar penelitian)\
+Penelitian indra silhouette score = 0.48 (Variabel yang\
+digunakan pada indra lebih banyak), penelitian kami silhouette\
+score = 0,6083.")
+st.write("13. Metodologi Penelitian")
+st.write("A. Metode apa yang saudara gunakan ?")
+
+st.write("Jawab:")
+st.write("• K-Means = melakukan klasterisasi.")
+st.write("• Boxplot = merupakan metode pelengkap untuk membantu\
+         proses penelitian ini dalam menghilangkan nilai outlier.")
+st.write("• Elbow Method = menentukan banyak nilai k")
+st.write("• Silhouette Score = menentukan banyak nilai k, dan validasi nilai\
+k.")
+
+st.write("B. Mengapa menggunakan metode tersebut ?")
+st.write("Jawab:")
+
+st.write("• K-Means = karena metode ini relatif sederhana dan mudah\
+diterapkan, dapat digunakan untuk dataset dalam jumlah besar\
+dan telah digunakan secara luas untuk menyelesaikan berbagai\
+persoalan komputasi, mampu mengelompokkan data besardengan sangat cepat (jurnal kode 1379). Salah satu penguat\
+menggunakan metode ini dari jurnal penelitian terdahulu ke 2\
+(Handayani) dan jurnal 3 (Indra).")
+
+
+st.write("• Boxplot = Karena penggunaan boxplot menghasilkan hasil\
+silhouette visualizer yang lebih baik (Buktikan perbandingan\
+antara pake boxplot dan tidak)")
+st.write("• Silhouette score = untuk menentukan nilai k dan validasi nilai k.")
+st.write("• Elbow method = untuk menentukan nilai k.")
+
+st.write("14. Penelitian anda menggunakan data primer atau sekunder ?")
+st.write("Jawab:")
+st.write("Sekunder, karena data yang didapatkan berasal dari pihak lain, bersifat publik\
+dari website resmi Satu Data Indonesia.")
+st.write("15. Apa teknik pengumpulan data yang digunakan ?")
+st.write("Jawab:")
+st.write("Teknik yang kami lakukan untuk pengumpulan data yaitu observasi daring,\
+dimana kami melakukan riset secara daring ke laman resmi Satu Data\
+Indonesia.")
+st.write("16. Apa arti unsupervised learning ?")
+st.write("Jawab:")
+st.write("Teknik dalam machine learning dimana algoritma menentukan/menemukan\
+pola dan strukturnya sendiri dalam data yang tidak berlabel.")
+st.write("17. Apa perbedaan supervised learning dan unsupervised learning ?")
+st.write("Jawab:")
+
+st.write("• Supervised memiliki label/kelas sedangkan unsupervised tidak memiliki label/kelas.")
+st.write("• Supervised memiliki tujuan prediksi dan klasifikasi sedangkan\
+unsupervised tidak memiliki tujuan prediksi yang spesifik, namun lebih\
+ke eksplorasi dan pemahaman data.")
+st.write("• Supervised mengidentifikasi pola memerlukan bantuan eksternal\
+         seperti label/kelas, sedangkan unsupervised tanpa bantuan eksternal.")
