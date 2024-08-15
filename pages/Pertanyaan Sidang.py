@@ -131,8 +131,10 @@ st.write("Karena metode ini relatif sederhana dan mudah ditetapkan, dapat\
          digunakan untuk dataset dalam jumlah besar dan telah digunakan secara\
          luas untuk menyelesaikan berbagai persoalan komputasi, mampu\
          mengelompokkan data besar dengan sangat cepat.(Ada di dalam jurnal 1379)")
+
 st.button("Tutup Jurnal", type=("primary"))
-if st.button("Buka Jurnal 1379.pdf", type=("secondary")):
+
+if st.button("Buka Jurnal 1379.pdf"):
     with st.spinner("Loading Dulu Gais..."):
         time.sleep(3)
     displayPDF("https://coral-kassey-1.tiiny.site")
