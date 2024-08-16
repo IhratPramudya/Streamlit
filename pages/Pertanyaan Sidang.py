@@ -256,3 +256,158 @@ unsupervised tidak memiliki tujuan prediksi yang spesifik, namun lebih\
 ke eksplorasi dan pemahaman data.")
 st.write("• Supervised mengidentifikasi pola memerlukan bantuan eksternal\
          seperti label/kelas, sedangkan unsupervised tanpa bantuan eksternal.")
+
+st.write("18. Apa pengertian rumus Sum of Square Error (SSE) ?")
+
+st.write("Jawab:")
+
+st.write("SSE adalah sebuah persamaan yang digunakan untuk mengukur perbedaan\
+dari nilai antar jumlah klaster atau selisih antara nilai yang diamati dan nilai\
+prediksi.")
+
+st.write("19. Pengertian Box plot ?")
+st.write("Jawab:")
+
+st.write("Box plot adalah cara standar untuk menampilkan distribusi data berdasarkan\
+lima ringkasan angka: nilai minimum (batas nilai ekstrem bawah), kuartil\
+pertama (Q1), median (Q2), kuartil ketiga (Q3), dan nilai maksimum (batas\
+nilai ekstrem atas).")
+
+st.write("BAB III")
+
+st.write("20. Bagaimana hasil penelitian saudara ?")
+st.write("Jawab:")
+
+st.write("Berdasarkan hasil analisis klasterisasi, pengelompokkan yang optimal berada\
+pada nilai k = 2, ditunjukkan dengan nilai Silhouette Coefficient sebesar\
+0,60830 yang berarti struktur yang dihasilkan baik, dengan kluster 0\
+berjumlah 170 desa atau kelurahan yang tergolong tingkat kasus stunting\
+sedang dan kluster 1 berjumlah 68 desa atau kelurahan yang tergolong\
+tingkat kasus stunting tinggi.")
+
+st.write("21. Apa itu data oulier ?")
+
+st.write("Jawab:")
+
+st.write("Data ourlier adalah nilai yang jauh berbeda dari nilai lainnya dalam kumpulan\
+data. (penyebab: kesalahan pengukuran, variasi alami, kejadian langka, atau\
+karena faktor lain yang tidak terduga.).")
+
+st.write("22. Apa itu threshold ?")
+
+st.write("Jawab:")
+
+st.write("Threshold adalah nilai ambang batas yang diterapkan sebagai standar dalam")
+
+st.write("melakukan analisis data.23. Kenapa kamu menentukan nilai threshold sebesar 360 ?")
+
+st.write("Jawab:")
+
+st.write("Karena dilihat pada boxplot awal, gambar boxplot menunjukan pada nilai\
+sekitar 360, sudah tidak terdapat outlier.")
+
+st.write("24. Apa yang dimaksud jangkauan interkuartil ?")
+
+st.write("Jawab:")
+
+st.write("Jangkauan interkuartil adalah jarak atau selisih antara kuartil bawah (Q1) dan\
+kuartil atas (Q3).")
+
+st.write("25. Apa yang dimaksud scatter plot ?")
+
+st.write("Jawab:")
+
+st.write("Scatter plot adalah jenis grafik yang digunakan dalam statistik dan analisis\
+data untuk menampilkan serta menganalisis hubungan antara dua variabel\
+numerik.")
+
+st.write("26. Kenapa ada copy-an baru dataframe yaitu “stunting_process”, untuk\
+apa ?")
+
+st.write("Jawab:")
+
+st.write("Dibuat supaya dataframe utamanya tidak diubah, karena proses elbow\
+method dan silhouette score, kolom yang tipe datanya string harus di drop,\
+sementara kolom tersebut diperlukan untuk mengetahui anggota tiap\
+klusternya dibagian akhir nanti.")
+
+st.write("27. Kenapa kamu bisa menentukan kalau cluster 0 itu kasus stunting\
+sedang, dan cluster 1 itu kasus stunting tinggi ? (PENTING BGT)")
+
+st.write("Jawab:")
+
+st.write("Karena dilihat dari hasil rata-rata kasus stunting disetiap clusternya pada\
+dataframe agregasi data.")
+
+st.write("28. Hasil analisis penelitian")
+
+st.write("A. Alasan kamu pakai hasil analisis di akhir bab 3 kenapa ?")
+
+st.write("Jawab:")
+
+st.write("Untuk menyimpulkan hasil dari penelitian kami di bab 3")
+
+
+st.write("B. Apa bedanya dengan kesimpulan ?")
+
+st.write("Jawab:")
+
+st.write("Pembedanya kalau kesimpulan itu berdasarkan hasil dari keseluruhan\
+dan menjawab dari tujuan penelitian.")
+
+st.write("BAB IV")
+st.write("29. Apakah kesimpulan yang kamu berikan sudah menjawab tujuan\
+penelitian kamu ? (hubungan antara masalah, tujuan penelitian dan\
+kesimpulan)")
+st.write("Jawab: Sudah menjawab. (kesimpulan no 1-3 untuk tujuan teoritis, no 4-5\
+untuk tujuan praktis)")
+st.write("30. Apa alasan kamu memberikan saran untuk menggunakan algoritma k-\
+medoids, DBSCAN? (harus memberikan alasan serta hasilnya juga) ?")
+st.write("Jawab:")
+st.write("A. DBSCAN")
+st.write("• DBSCAN Tahan terhadap outlier.")
+st.write("• DBSCAN Tidak perlu menentukan nilai cluster terlebih dahulu.")
+st.write("• Bisa menentukan cluster secara otomatis.")
+st.write("B. K-Medoids")
+st.write("• K-Medoids tahan terhadap outlier")
+st.write("31. Apa alasan kamu memberikan saran untuk menggunakan tools yang\
+berbeda seperti pada penelitian? (harus memberikan alasan serta\
+hasilnya juga)")
+
+
+st.write("Jawab:")
+st.write("• Supaya lebih memudahkan proses penelitian pada penelitian\
+selanjutnya.")
+st.write("• Untuk membandingkan hasil dari penelitian menggunakan tools lainnya.\
+PERTANYAAN TAMBAHAN")
+st.write("1. Apa rumusan masalah dari penelitian kamu ? (buat lebih terperinci\
+masalahnya berdasarkan tujuan penelitian)")
+st.write("Jawab:")
+st.write("A. Teoritis")
+st.write("• Bagaimana proses klasterisasi tingkat kasus stunting di Kabupaten\
+Batang menggunakan algoritma k-means?")
+st.write("• Apakah data outlier mempengaruhi hasil klasterisasi menggunakan\
+algoritma k-means ? (Dapat mempengaruhi, karena algoritma k-means\
+sensitif terhadap outlier *jika ditanya jawabannya*)B. Praktis")
+st.write("• Bagaimana hasil pemetaan tingkat kasus stunting pada setiap daerah\
+di Kabupaten Batang ?")
+st.write("2. Selain penggunaan boxplot, metode apa saja yang dapat mengatasi data\
+outlier ?")
+st.write("Jawab:")
+st.write("Ada beberapa metode yang bisa digunakan :")
+
+st.write("• Standar scaler")
+st.write("• Min Max scaler")
+st.write("• Boxplot IQR (interkuartil).")
+st.write("3. Apa Batasan masalah dari penelitian kamu ?")
+st.write("Jawab:")
+st.write("• Data yang diolah merupakan data sekunder yaitu Jumlah Balita\
+Stunting Per Desa pada periode Desember 2023.")
+
+st.write("• Pengambilan data didapatkan dari laman resmi Satu Data Indonesia")
+st.write("• Pengujian hasil klasterisasi data menggunakan bahasa pemrograman\
+python untuk mendapatkan hasil yang baik.")
+
+
+
+
